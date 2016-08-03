@@ -25,7 +25,6 @@ def right_justify(s):
 ################################################################################
 def main():
     """Call your functions within this function."""
-    print("Hello World!")
     right_justify("Python")
     right_justify("YOUR_NAME")
 
