@@ -14,12 +14,12 @@
 ################################################################################
 # Write your function below:
 # Body
-
-
-
-
-
-
+def right_justify(s):
+	strlen = len(s); # length of string passed to the function
+	totallen = 70; # total length of the string to be printed
+	numspaces = totallen - strlen # the number of leading spaces before printing the string passed
+	strfinal = " " * numspaces + s # concatenate the leading spaces and the string
+	print(strfinal) # print the final string
 
 # Write your function above:
 ################################################################################
