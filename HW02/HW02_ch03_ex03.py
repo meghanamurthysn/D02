@@ -40,17 +40,51 @@
 # Write your functions below:
 # Body
 
+def horiz():
+	print('+','- '*4, end = '')
 
+def horiz1():
+	print('|',' '*8, end = '')
 
+def do_twice(func):
+	func()
+	func()
 
+def do_four(func):
+	do_twice(func)
+	do_twice(func)
+	
+def horiz_first():
+	do_twice(horiz)
 
+def horiz_next():
+	do_twice(horiz1)
+	print("|")
 
+def horiz_next1():
+	do_four(horiz1)
+	print("|")
+	
+def two_simp():
+	horiz_first()
+	print("+")
+	do_four(horiz_next)
+	
+def two_by_two():
+	do_twice(two_simp)
+	horiz_first()
+	print("+")
 
+def four_simp():
+	do_four(horiz)
+	print("+")
+	do_four(horiz_next1)
 
-
-
-
-
+def four_by_four():
+	do_four(four_simp)
+	do_four(horiz)
+	print("+")
+	
 # Write your functions above:
 ################################################################################
 def main():
@@ -59,10 +93,7 @@ def main():
     two_by_two()
     four_by_four()
     """
-    print("Hello World!")
-    
-
-
-
+    two_by_two()
+    four_by_four()
 if __name__ == "__main__":
     main()
